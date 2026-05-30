@@ -1,706 +1,137 @@
 <!doctype html>
-<html lang="th">
+<html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="LeadSale Store: ข่าวสารและศูนย์รวมลิงก์ข้อมูล จัดหน้าแบบเว็บหน่วยงานการศึกษา อ่านง่าย โหลดเร็ว เหมาะกับ GitHub Pages" />
-  <title>LeadSale Store | ข่าวสาร & ศูนย์ข้อมูล</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <!-- Domain baru -->
-  <link rel="canonical" href="https://leadsale.store/" />
+<title>LeadSale Store | Papan Catatan Data & Arsip Digital</title>
+<meta name="description" content="LeadSale Store menyajikan papan catatan data, arsip digital, dan referensi informasi harian dengan tampilan sederhana, natural, dan mudah dibaca.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://leadsale.store/">
 
-  <meta name="google-site-verification" content="vCKi-MB9iWmbXzsX4G7E-aI-jvOHrdf6uojJT8iLSIs" />
-  <meta name="google-site-verification" content="HBG7SaS-DmFFiYnfI-vT2LOdw3gM2AK3wbmnixc4zR8" />
+<meta name="google-site-verification" content="vCKi-MB9iWmbXzsX4G7E-aI-jvOHrdf6uojJT8iLSIs" />
+<meta name="google-site-verification" content="HBG7SaS-DmFFiYnfI-vT2LOdw3gM2AK3wbmnixc4zR8" />
 <meta name="google-site-verification" content="j1SrvHvhac9vwPJz6ApjoQHvmXYkSWkGGePEBDdZlPU" />
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="LeadSale Store | ข่าวสาร & ศูนย์ข้อมูล" />
-  <meta property="og:description" content="หน้าเว็บสไตล์ edu/government: ข่าวสั้น + ศูนย์รวมลิงก์ข้อมูล จัดระเบียบชัดเจน เหมาะกับ GitHub Pages" />
-  <meta property="og:url" content="https://leadsale.store/" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="okey.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="okey.png">
-  <link rel="apple-touch-icon" href="okey.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LeadSale Store | Papan Catatan Data & Arsip Digital">
+<meta property="og:description" content="Papan catatan digital berisi arsip data, informasi harian, dan referensi terkait yang disusun ringan dan profesional.">
+<meta property="og:url" content="https://leadsale.store/">
+<meta property="og:image" content="okey.png">
 
-  <meta name="twitter:card" content="summary" />
+<link rel="icon" type="image/png" href="okey.png">
+<meta name="theme-color" content="#1e3a8a">
 
-  <!-- Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"LeadSale Store",
-    "url":"https://leadsale.store/",
-    "inLanguage":"th",
-    "description":"ข่าวสารและศูนย์รวมลิงก์ข้อมูล โครงสร้างแบบเว็บหน่วยงานการศึกษา โหลดเร็ว เหมาะกับ GitHub Pages"
-  }
-  </script>
-
-  <style>
-    :root{
-      /* แตกต่าง “total”: โทนเว็บ edu gov แบบเข้ม-สว่างสลับ + layout ข่าว */
-      --bg:#f3f6fb;
-      --paper:#ffffff;
-      --ink:#0a1630;
-      --muted:#5b6a85;
-
-      --navy:#0b2e5c;
-      --blue:#1456c5;
-      --sky:#e7f0ff;
-
-      --line:#d7e0ee;
-      --line2:#c2cde2;
-
-      --radius:12px;
-      --max: 1180px;
-
-      --shadow: 0 14px 34px rgba(10,22,48,.10);
-      --shadow2: 0 6px 18px rgba(10,22,48,.08);
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans Thai", "Helvetica Neue", Arial;
-      color:var(--ink);
-      background:
-        linear-gradient(180deg, #ffffff 0%, var(--bg) 45%, var(--bg) 100%);
-      line-height:1.75;
-    }
-
-    a{color:inherit}
-    a:hover{opacity:.92}
-
-    .wrap{width:min(var(--max), calc(100% - 40px)); margin:0 auto;}
-
-    /* a11y */
-    .skip{
-      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
-    }
-    .skip:focus{
-      position:fixed; left:14px; top:14px;
-      width:auto; height:auto;
-      padding:10px 12px;
-      background:#fff;
-      border:1px solid var(--line2);
-      border-radius:12px;
-      box-shadow:var(--shadow);
-      z-index:9999;
-    }
-
-    /* GOV BAR */
-    .govbar{
-      background: var(--navy);
-      color:#fff;
-      font-size:13px;
-    }
-    .govbar .wrap{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-      padding:10px 0;
-    }
-    .govbar strong{font-weight:1000}
-    .govbar .right{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-      opacity:.95;
-    }
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.22);
-      background: rgba(255,255,255,.10);
-      white-space:nowrap;
-    }
-
-    /* Header: banner edu */
-    .header{
-      background: linear-gradient(180deg, #ffffff, rgba(255,255,255,.85));
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(10px);
-    }
-    .header .wrap{
-      display:grid;
-      grid-template-columns: 1.2fr 1.3fr;
-      gap: 14px;
-      align-items:center;
-      padding: 14px 0;
-    }
-
-    .mast{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      min-width: 240px;
-    }
-    .crest{
-      width:52px;height:52px;
-      border-radius: 10px;
-      background:
-        linear-gradient(135deg, rgba(20,86,197,.16), rgba(11,46,92,.12)),
-        radial-gradient(120% 120% at 20% 20%, rgba(255,255,255,.9), rgba(255,255,255,.2));
-      border:1px solid var(--line2);
-      box-shadow: var(--shadow2);
-      display:grid; place-items:center;
-      font-weight:1000;
-      color: var(--navy);
-      letter-spacing:.6px;
-    }
-    .site-title{
-      font-weight: 1000;
-      letter-spacing:.2px;
-      line-height:1.15;
-    }
-    .site-sub{
-      font-size:13px;
-      color:var(--muted);
-      margin-top:2px;
-    }
-
-    /* Utility row (search-like) */
-    .util{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      justify-content:flex-end;
-      flex-wrap:wrap;
-    }
-    .util .tag{
-      font-size:13px;
-      color: var(--navy);
-      background: var(--sky);
-      border:1px solid rgba(20,86,197,.22);
-      padding:8px 10px;
-      border-radius: 999px;
-      white-space:nowrap;
-    }
-    .util .btn{
-      text-decoration:none;
-      font-size:14px;
-      font-weight:900;
-      padding:10px 12px;
-      border-radius: 10px;
-      border:1px solid rgba(11,46,92,.22);
-      background: linear-gradient(180deg, rgba(20,86,197,.12), rgba(255,255,255,.92));
-      box-shadow: var(--shadow2);
-      white-space:nowrap;
-    }
-
-    /* Layout: Newsroom */
-    .main{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap: 14px;
-      padding: 16px 0 8px;
-      align-items:start;
-    }
-
-    .panel{
-      background: var(--paper);
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .panel-head{
-      padding: 12px 14px;
-      border-bottom: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(20,86,197,.06), #fff);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-    }
-    .panel-head strong{color: var(--navy)}
-    .meta{
-      font-size: 12px;
-      color: var(--muted);
-      white-space:nowrap;
-    }
-    .panel-body{padding: 14px}
-
-    /* News list */
-    .news-list{
-      display:grid;
-      gap:12px;
-      margin-top: 10px;
-    }
-    .news{
-      border:1px solid var(--line);
-      border-radius: 12px;
-      background:#fff;
-      box-shadow: var(--shadow2);
-      overflow:hidden;
-    }
-    .news .row{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 0;
-      padding: 12px 12px 10px;
-    }
-    .news .label{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      font-size:12px;
-      color: var(--muted);
-    }
-    .news h2{
-      margin: 6px 0 6px;
-      font-size: 18px;
-      letter-spacing:-.15px;
-      line-height:1.3;
-    }
-    .news p{margin:0;color:var(--muted)}
-    .news .actions{
-      margin-top: 10px;
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-    .news .actions a{
-      text-decoration:none;
-      font-weight:900;
-      font-size:13px;
-      padding:8px 10px;
-      border-radius: 10px;
-      border:1px solid var(--line2);
-      background:#fff;
-    }
-    .news .actions a.primary{
-      border-color: rgba(20,86,197,.30);
-      background: var(--sky);
-    }
-
-    /* Sidebar blocks */
-    .box{
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      background:#fff;
-      box-shadow: var(--shadow2);
-      overflow:hidden;
-    }
-    .box + .box{margin-top: 12px;}
-    .box .head{
-      padding: 12px 14px;
-      border-bottom: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(11,46,92,.06), #fff);
-      font-weight: 1000;
-      color: var(--navy);
-    }
-    .box .body{padding: 12px 14px;}
-
-    .links{
-      list-style:none;
-      padding:0;margin:0;
-      display:grid;
-      gap:8px;
-    }
-    .links a{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border:1px solid var(--line);
-      background:#fff;
-      text-decoration:none;
-      box-shadow: var(--shadow2);
-    }
-    .links a span{
-      color: var(--muted);
-      font-size:12px;
-      white-space:nowrap;
-    }
-
-    /* Directory list (full) */
-    .dir{
-      margin-top: 12px;
-      border-top: 1px dashed var(--line2);
-      padding-top: 12px;
-    }
-    .dir-grid{
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap:10px;
-      margin-top: 10px;
-    }
-    .dir-grid a{
-      text-decoration:none;
-      padding:10px 12px;
-      border-radius: 12px;
-      border:1px solid var(--line);
-      background:#fff;
-      box-shadow: var(--shadow2);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-    }
-    .dir-grid a em{
-      font-style:normal;
-      color: var(--muted);
-      font-size: 12px;
-      white-space:nowrap;
-    }
-
-    /* Footer */
-    .footer{
-      margin-top: 16px;
-      padding: 18px 0 34px;
-      border-top: 1px solid var(--line);
-      background: rgba(255,255,255,.72);
-    }
-    .footer .wrap{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr .6fr;
-      gap: 12px;
-      align-items:start;
-    }
-    .footcard{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow2);
-      padding: 12px 14px;
-    }
-    .legal{color: var(--muted); font-size: 14px;}
-    .legal a{color: var(--muted); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(91,106,133,.35)}
-
-    /* Responsive */
-    @media (max-width: 980px){
-      .header .wrap{grid-template-columns: 1fr}
-      .main{grid-template-columns: 1fr}
-      .dir-grid{grid-template-columns: 1fr}
-      .govbar .wrap{flex-direction:column; align-items:flex-start}
-      .util{justify-content:flex-start}
-    }
-  </style>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#eef4ff;color:#1e293b;line-height:1.7}a{color:#1e3a8a;text-decoration:none;font-weight:700}a:hover{text-decoration:underline}.wrap{width:min(920px,calc(100% - 24px));margin:auto}.top{background:#1e3a8a;color:#fff;padding:30px 0}.top h1{margin:0;font-size:30px}.top p{margin:8px 0 0;color:#dbeafe}.menu{background:#fff;border-bottom:1px solid #cbd5e1}.menu .wrap{display:flex;gap:10px;flex-wrap:wrap;padding:12px 0}.menu a{padding:7px 12px;border:1px solid #cbd5e1;background:#f8fafc;font-size:14px}.board{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:20px}.card{background:#fff;border:1px solid #cbd5e1;padding:22px;margin-bottom:18px}.card h2{margin:0 0 12px;font-size:23px;color:#0f172a}.pin{background:#f8fafc;border-left:4px solid #1e3a8a;padding:14px;margin:16px 0}.item{background:#f8fafc;border:1px solid #dbe3ef;padding:14px;margin-top:12px}.item h3{margin:0 0 8px;font-size:18px}.links{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}.links li{background:#f8fafc;border:1px solid #dbe3ef;padding:12px}.foot{text-align:center;color:#64748b;font-size:14px;padding:28px 0}@media(max-width:760px){.board{grid-template-columns:1fr}.top h1{font-size:25px}}
+</style>
 </head>
 
 <body>
-  <a class="skip" href="#content">ข้ามไปยังเนื้อหา</a>
 
-  <!-- GOV BAR -->
-  <div class="govbar">
-    <div class="wrap">
-      <div class="pill">LeadSale Store • <strong>Education / Government Style</strong></div>
-      <div class="right">
-        <div class="pill">สถานะ: <strong>เผยแพร่</strong></div>
-        <div class="pill">อัปเดตปี <span id="yTop"></span></div>
-      </div>
-    </div>
-  </div>
+<header class="top">
+<div class="wrap">
+<h1>LeadSale Store</h1>
+<p>Papan catatan data dan arsip digital yang rapi, ringan, dan tidak membuat pengunjung merasa sedang membaca pengumuman kelurahan tahun 2007.</p>
+</div>
+</header>
 
-  <header class="header" role="banner">
-    <div class="wrap">
-      <div class="mast" aria-label="Site identity">
-        <div class="crest" aria-hidden="true">LS</div>
-        <div>
-          <div class="site-title">LeadSale Store</div>
-          <div class="site-sub">หน้า “ข่าวสาร” + ศูนย์รวมลิงก์ • เรียบ • เป็นทางการ • โหลดไว</div>
-        </div>
-      </div>
+<nav class="menu">
+<div class="wrap">
+<a href="#utama">Utama</a>
+<a href="#catatan">Catatan</a>
+<a href="#referensi">Referensi</a>
+</div>
+</nav>
 
-      <!-- Quick utilities -->
-      <div class="util" aria-label="Utilities">
-        <div class="tag">Newsroom</div>
-        <div class="tag">Directory</div>
-        <a class="btn" href="#directory">เปิดรายการลิงก์</a>
-        <a class="btn" href="#cta">ไปที่ CTA</a>
-      </div>
-    </div>
-  </header>
+<main class="wrap">
 
-  <main id="content" class="wrap">
-    <section class="main" aria-label="News layout">
-      <!-- Left: News -->
-      <div class="panel">
-        <div class="panel-head">
-          <strong>ข่าวประกาศ / ข่าวสั้น</strong>
-          <span class="meta">เผยแพร่: <span id="d"></span></span>
-        </div>
+<div class="board">
 
-        <div class="panel-body">
-          <p style="margin:0;color:var(--muted)">
-            รูปแบบนี้ออกแบบให้เหมือนหน้า “ข่าว” ของเว็บไซต์หน่วยงานการศึกษา:
-            ใช้การ์ดข่าวสั้น อ่านง่าย มีปุ่มทางลัด และคงลิงก์ภายนอกตามเดิมทั้งหมด
-          </p>
+<section>
 
-          <div class="news-list">
-            <article class="news" aria-label="News item 1">
-              <div class="row">
-                <div class="label">
-                  <span>ประกาศระบบ • หมวด: ศูนย์ข้อมูล</span>
-                  <span>อัปเดตล่าสุด: ปี <span id="yInline"></span></span>
-                </div>
-                <h2>เปิดใช้งานหน้า Directory อย่างเป็นทางการ (LeadSale Store)</h2>
-                <p>
-                  LeadSale Store จัดทำหน้าศูนย์รวมลิงก์ข้อมูลในรูปแบบเป็นระเบียบ
-                  เพื่อให้ผู้ใช้งานเข้าถึงแหล่งข้อมูลได้เร็วขึ้น โดยแนะนำให้ใช้งานผ่านเมนูทางลัดด้านบน
-                  และเลือกกดลิงก์ตามบริบท เพื่อให้หน้าเว็บดูสะอาดและน่าเชื่อถือ
-                  เช่น การอ้างอิงแหล่งข้อมูลในเนื้อหา:
-                  <a href="https://lamarsalaplayadegandia.com/" target="_blank" rel="noopener noreferrer">Data HK</a>
-                </p>
-                <div class="actions">
-                </div>
-              </div>
-            </article>
+<article class="card" id="utama">
+<h2>LeadSale Store | Papan Catatan Data & Arsip Digital</h2>
 
-            <article class="news" aria-label="News item 2">
-              <div class="row">
-                <div class="label">
-                  <span>แนวทางการใช้งาน • หมวด: มาตรฐานเว็บ</span>
-                  <span>หมายเหตุ: เปิดแท็บใหม่อย่างปลอดภัย</span>
-                </div>
-                <h2>แนวทางจัดวางลิงก์: ไม่รก อ่านง่าย และตรวจสอบได้</h2>
-                <p>
-                  เพื่อให้สอดคล้องกับสไตล์เว็บหน่วยงาน แนะนำให้วางลิงก์หลักไว้ในส่วน “ทางลัด”
-                  ส่วนลิงก์จำนวนมากให้อยู่ใน Directory ด้านล่าง และใช้ <code>rel="noopener noreferrer"</code>
-                  สำหรับลิงก์ภายนอก เพื่อความปลอดภัยในการเปิดแท็บใหม่
-                </p>
-                <div class="actions">
-                </div>
-              </div>
-            </article>
+<p>
+<strong>LeadSale Store</strong> dibuat sebagai halaman catatan digital yang menyajikan arsip data, informasi harian, dan beberapa referensi pendukung dengan tampilan sederhana serta mudah dipahami.
+</p>
 
-            <article class="news" aria-label="News item 3">
-              <div class="row">
-                <div class="label">
-                  <span>ประกาศทางออกหลัก • หมวด: CTA</span>
-                  <span>การเข้าถึงด่วน</span>
-                </div>
-                <h2>กำหนดปุ่มทางออกหลัก (CTA) เพื่อการใช้งานทันที</h2>
-                <p>
-                  สำหรับผู้ใช้งานที่ต้องการเข้าหน้าปลายทางหลักโดยไม่ต้องเลื่อนหาในรายการยาว
-                  ให้ใช้ปุ่ม CTA ที่ด้านล่างของหน้า:
-                  (ตัวอย่างการอ้างอิงลิงก์ในบริบท)
-                </p>
-                <div class="actions">
-                  <a class="primary" href="#cta">ไปที่ CTA</a>
-                </div>
-              </div>
-            </article>
-          </div>
+<p>
+Konsep halaman ini memakai gaya papan pengumuman modern. Isinya langsung ke inti, tidak bertele-tele, dan tidak menumpuk terlalu banyak tautan agar pengalaman membaca tetap nyaman.
+</p>
 
-          <!-- Directory section anchor -->
-          <div class="dir" id="directory">
-            <div class="panel-head" style="border:0; padding:0 0 10px; background:none">
-              <strong>Directory: รายการลิงก์ทั้งหมด</strong>
-              <span class="meta">คงลิงก์เดิม 100%</span>
-            </div>
+<div class="pin">
+Catatan yang rapi membantu pengunjung menemukan informasi lebih cepat. Kalau semua ditaruh sekaligus, nanti yang dicari data, yang ketemu malah bingung.
+</div>
 
-            <!-- อย่าลบ/อย่าเปลี่ยนลิงก์ -->
-            <div class="dir-grid">
-<li><a href="https://airport-parking-quote.co.uk/" target="_blank" rel="noopener">Travel Parking Guide</a></li>
-<li><a href="https://beyondtrends.store/" target="_blank" rel="noopener">Modern Style Hub</a></li>
-<li><a href="https://cave222.org/" target="_blank" rel="noopener">Creative Cave Space</a></li>
-<li><a href="https://digitalgoodies.store/" target="_blank" rel="noopener">Online Resource Center</a></li>
-<li><a href="https://elvvaws.org/" target="_blank" rel="noopener">Community Insight Portal</a></li>
-<li><a href="https://expressthoughts.site/" target="_blank" rel="noopener">Daily Thought Journal</a></li>
-<li><a href="https://feltribute.xyz/" target="_blank" rel="noopener">Tribute Collection</a></li>
-<li><a href="https://flakey.info/" target="_blank" rel="noopener">Random Notes Archive</a></li>
-<li><a href="https://football-livescore.co.uk/" target="_blank" rel="noopener">Match Update Center</a></li>
-<li><a href="https://freeflowingthoughts.site/" target="_blank" rel="noopener">Open Mind Stories</a></li>
-<li><a href="https://genericlevitra-buy.info/" target="_blank" rel="noopener">Health Reference Info</a></li>
-<li><a href="https://healthyvoices.org/" target="_blank" rel="noopener">Healthy Voices Media</a></li>
-<li><a href="https://jobseek.us/" target="_blank" rel="noopener">Career Opportunity Board</a></li>
-<li><a href="https://juicylucyinfo.co.uk/" target="_blank" rel="noopener">Food & Lifestyle UK</a></li>
-<li><a href="https://katanaownersclub.co.uk/" target="_blank" rel="noopener">Motorcycle Enthusiast Club</a></li>
-<li><a href="https://kolkataescortsxx.info/" target="_blank" rel="noopener">Kolkata Urban Notes</a></li>
-<li><a href="https://laotzu.store/" target="_blank" rel="noopener">Eastern Philosophy Store</a></li>
-<li><a href="https://lifestylepulse.site/" target="_blank" rel="noopener">Lifestyle Pulse Daily</a></li>
-<li><a href="https://longchampbags.uk/" target="_blank" rel="noopener">Fashion Collection UK</a></li>
-<li><a href="https://machynllethgolfclub.co.uk/" target="_blank" rel="noopener">Golf Community Hub</a></li>
-<li><a href="https://mailstorm.biz/" target="_blank" rel="noopener">MailStorm Network</a></li>
-<li><a href="https://masjidmekarindah.id/" target="_blank" rel="noopener">Masjid Mekar Indah Official</a></li>
-<li><a href="https://michaels-kors.co.uk/" target="_blank" rel="noopener">Luxury Fashion Outlet</a></li>
-<li><a href="https://middlefieldma.us/" target="_blank" rel="noopener">Middlefield Community</a></li>
-<li><a href="https://musclesteroids.info/" target="_blank" rel="noopener">Fitness Knowledge Base</a></li>
-<li><a href="https://mypet24.co.uk/" target="_blank" rel="noopener">Pet Care Support</a></li>
-<li><a href="https://portpatrick-brewery.co.uk/" target="_blank" rel="noopener">Brewery & Craft Drinks</a></li>
-<li><a href="https://racingshares.co.uk/" target="_blank" rel="noopener">Racing Share Updates</a></li>
-<li><a href="https://replicamarket.co.uk/" target="_blank" rel="noopener">Collector Market UK</a></li>
-<li><a href="https://scriblerian.net/" target="_blank" rel="noopener">Academic Writing Space</a></li>
-<li><a href="https://shanbehzadeh.art/" target="_blank" rel="noopener">Art & Creative Gallery</a></li>
-<li><a href="https://seafishnottingham.co.uk/" target="_blank" rel="noopener">Seafood Nottingham</a></li>
-<li><a href="https://smallde.com/" target="_blank" rel="noopener">SmallDE Online</a></li>
-<li><a href="https://sobattogel.store/" target="_blank" rel="noopener">Angka Komunitas</a></li>
-<li><a href="https://togelonline.space/" target="_blank" rel="noopener">Pasaran Digital Hub</a></li>
-<li><a href="https://ubbgloucestershire.org/" target="_blank" rel="noopener">Gloucestershire Community</a></li>
-<li><a href="https://unitedforcharitableassistance.org/" target="_blank" rel="noopener">Charitable Assistance Network</a></li>
-<li><a href="https://webmaster-cs.xyz/" target="_blank" rel="noopener">Webmaster Creative Studio</a></li>
-<li><a href="https://webprediksibola.id/" target="_blank" rel="noopener">Analisa Bola Hari Ini</a></li>
-<li><a href="https://youth-diplomacy.org/" target="_blank" rel="noopener">Youth Diplomacy Forum</a></li>
-<li><a href="https://wsdata.store/" target="_blank" rel="noopener">WS Data Center</a></li>
-<li><a href="https://tgdata.store/" target="_blank" rel="noopener">TG Data Network</a></li>
-<li><a href="https://latestdata.store/" target="_blank" rel="noopener">Latest Data Source</a></li>
-<li><a href="https://emailsmarketing.store/" target="_blank" rel="noopener">Marketing Resource Hub</a></li>
-<li><a href="https://officedata.store/" target="_blank" rel="noopener">Office Resource Database</a></li>
-<li><a href="https://buydatabase.store/" target="_blank" rel="noopener">Digital Resource Market</a></li>
-<li><a href="https://koreadata.store/" target="_blank" rel="noopener">Korea Information Hub</a></li>
-<li><a href="https://bankdata.store/" target="_blank" rel="noopener">Financial Data Network</a></li>
-<li><a href="https://indonesiadata.store/" target="_blank" rel="noopener">Indonesia Resource Center</a></li>
-<li><a href="https://thailanddata.store/" target="_blank" rel="noopener">Thailand Information Hub</a></li>
-<li><a href="https://chinadata.store/" target="_blank" rel="noopener">China Insight Archive</a></li>
-<li><a href="https://lastdata.store/" target="_blank" rel="noopener">Last Data Collection</a></li>
-<li><a href="https://indiadata.store/" target="_blank" rel="noopener">India Resource Library</a></li>
-<li><a href="https://saledatabase.store/" target="_blank" rel="noopener">Sales Resource Platform</a></li>
-<li><a href="https://selldatabase.store/" target="_blank" rel="noopener">Business Leads Center</a></li>
-<li><a href="https://leadsale.store/" target="_blank" rel="noopener">Lead Generation Media</a></li>
-<li><a href="https://malaysiadata.store/" target="_blank" rel="noopener">Malaysia Resource Hub</a></li>
-<li><a href="https://telemarketingleads.store/" target="_blank" rel="noopener">Telemarketing Insights</a></li>
-<li><a href="https://insurancesdata.store/" target="_blank" rel="noopener">Insurance Information Center</a></li>
-<li><a href="https://b2cdata.store/" target="_blank" rel="noopener">B2C Resource Platform</a></li>
-<li><a href="https://livedrawchina.space/" target="_blank" rel="noopener">China Result Update</a></li>
-<li><a href="https://livedrawsgp4d.art/" target="_blank" rel="noopener">Singapore 4D Result Board</a></li>
-<li><a href="https://livedrawcambodia4d.art/" target="_blank" rel="noopener">Cambodia 4D Update</a></li>
-<li><a href="https://livedrawsgp9.shop/" target="_blank" rel="noopener">Singapore Number Update</a></li>
-<li><a href="https://garyhughes.org/" target="_blank" rel="noopener">Gary Hughes Official</a></li>
-<li><a href="https://prediksijituhk.shop/" target="_blank" rel="noopener">HK Number Reference</a></li>
-<li><a href="https://fiscalidadinternacional.org/" target="_blank" rel="noopener">International Fiscal Studies</a></li>
-<li><a href="https://paitowarnasgp.ink/" target="_blank" rel="noopener">Singapore Color Chart</a></li>
-<li><a href="https://metanerus.net/" target="_blank" rel="noopener">Number Art Space</a></li>
-<li><a href="https://prediksisdypools.net/" target="_blank" rel="noopener">Sydney Number Guide</a></li>
-<li><a href="https://cvdwitunggalabadi.com/" target="_blank" rel="noopener">CVDW Tunggal Abadi</a></li>
-<li><a href="https://lunwenchachongjiance.com/" target="_blank" rel="noopener">Academic Research Service</a></li>
-<li><a href="https://paitolengkap.org/" target="_blank" rel="noopener">Complete Chart Archive</a></li>
-<li><a href="https://pharmacielegend.shop/" target="_blank" rel="noopener">Pharmacy Legend Store</a></li>
-<li><a href="https://replicanow.shop/" target="_blank" rel="noopener">Replica Now Collection</a></li>
-<li><a href="https://sdchaye.com/" target="_blank" rel="noopener">SD Chaye Official</a></li>
-<li><a href="https://voertuiggegevens.net/" target="_blank" rel="noopener">Vehicle Information Center</a></li>
-<li><a href="https://datakeluaranhk.mom/" target="_blank" rel="noopener">Data HK</a></li>
-              <li><a href="https://diajengwitri.id/" target="_blank" rel="noopener">Diajeng</a></li>
-              <li><a href="https://barbourinternationaljackets.store/" target="_blank" rel="noopener">Data HK</a></li>
-              <li><a href="https://beliyspisok.site/" target="_blank" rel="noopener">Paito HK</a></li>
-              <li><a href="https://climbr.store/" target="_blank" rel="noopener">Paito Warna HK</a></li>
-              <li><a href="https://achbank.store/" target="_blank" rel="noopener">Paito Warna HK</a></li>
-              <li><a href="https://acheterderoxat.space/" target="_blank" rel="noopener">Paito Warna HK</a></li>
-              <li><a href="https://ctupka.store/" target="_blank" rel="noopener">Paito Warna HK</a></li>
-              <li><a href="https://filedownloadsitereank.store/" target="_blank" rel="noopener">Paito Warna HK</a></li>
-              <li><a href="https://freya-subb-etalon.space/" target="_blank" rel="noopener">Paito Warna HK</a></li>
-              <li><a href="https://khachatrian.space/" target="_blank" rel="noopener">Paito Warna HK</a></li>
-              <li><a href="https://parakram.store/" target="_blank" rel="noopener">Paito Warna HK</a></li>
-              <li><a href="https://pharmaciecotedivoire.space/" target="_blank" rel="noopener">Paito Warna HK</a></li>
-              <li><a href="https://retinaonlinebuy.store/" target="_blank" rel="noopener">Paito Warna HK</a></li>
-              <li><a href="https://techboole.store/" target="_blank" rel="noopener">Paito Warna HK</a></li>
-               <li><a href="https://thietkeweb.space/" target="_blank" rel="noopener">Paito Warna HK</a></li>
-              <li><a href="https://unitypga.store/" target="_blank" rel="noopener">Paito Warna HK</a></li>
-              <li><a href="https://etilalkol.space/" target="_blank" rel="noopener">Paito Warna HK</a></li>
-              <li><a href="https://angkakeramat1.blogspot.com/" target="_blank" rel="noopener">Angka Keramat</a></li>
-              <li><a href="https://gravatar.com/pikavepika" target="_blank" rel="noopener">Data HK</a></li>
-              <li><a href="https://data-hk-lotto-c9f99b.webflow.io/" target="_blank" rel="noopener">Data HK Lotto</a></li>
-              <li><a href="https://sites.google.com/view/datrinbilly/beranda" target="_blank" rel="noopener">Data HK</a></li>
-              <li><a href="https://isakoofficial01-oss.github.io/kajian-budaya-populer/" target="_blank" rel="noopener">Kajian Budaya</a></li>
-              <li><a href="https://datasdylotto.github.io/pikavepika/" target="_blank" rel="noopener">Data HK</a></li>
-              <li><a href="https://rentry.co/59481-ewing-elizabeth-1971-fashion-in-underwear" target="_blank" rel="noopener">Paito HK</a></li>
-            </div>
-          </div>
-        </div>
-      </div>
+<p>
+Dengan struktur yang ringan, halaman ini cocok digunakan sebagai bagian dari jaringan pendukung yang tetap terlihat natural, profesional, dan berbeda dari domain lainnya.
+</p>
+</article>
 
-      <!-- Right: Sidebar -->
-      <aside aria-label="Sidebar">
-        <div class="box">
-          <div class="head">ลิงก์ทางลัด (คงเดิม)</div>
-          <div class="body">
-            <ul class="links">
+<article class="card" id="catatan">
+<h2>Catatan Hari Ini</h2>
 
-            </ul>
-          </div>
-        </div>
+<div class="item">
+<h3>Arsip yang Mudah Ditelusuri</h3>
+<p>Informasi disusun dalam bagian pendek agar pengunjung dapat memahami isi halaman tanpa harus menggulir terlalu jauh.</p>
+</div>
 
-        <div class="box" id="cta">
-          <div class="head">ทางออกหลัก (CTA)</div>
-          <div class="body">
-            <p style="margin:0 0 10px;color:var(--muted)">
-              ปุ่มนี้เป็นจุดทางออกหลักเพื่อเข้าหน้าปลายทางทันที
-            </p>
-          </div>
-        </div>
+<div class="item">
+<h3>Referensi Secukupnya</h3>
+<p>Tautan pendukung dipilih seperlunya agar halaman tetap terlihat wajar, bersih, dan tidak seperti gudang link.</p>
+</div>
 
-        <div class="box">
-          <div class="head">แหล่งอ้างอิงเพิ่มเติม</div>
-          <div class="body">
-            <ul class="links">
-              <!-- อย่าลบ/อย่าเปลี่ยนลิงก์ -->
-<ul class="verticalt-menu">
-<li><a href="https://prediksisydney.store/" target="_blank" rel="noopener noreferrer">Prediksi SDY Hari ini</a></li>
-<li><a href="https://data-hongkong.site/" target="_blank" rel="noopener noreferrer">Data Hongkong 2026</a></li>
-<li><a href="https://data-hk.site" target="_blank" rel="noopener noreferrer">Data HK 2026</a></li>
-<li><a href="https://datasdypools.com/" target="_blank" rel="noopener noreferrer">Data SDY 2026</a></li>
-<li><a href="https://datasydneylotto.website/" target="_blank" rel="noopener noreferrer">Data SDY Lotto</a></li>
-<li><a href="https://datasdylotto1.site/" target="_blank" rel="noopener noreferrer">Data SDY Lotto Hari ini</a></li>
-<li><a href="https://prediksijitu.website/" target="_blank" rel="noopener noreferrer">Prediksi Jitu</a></li>
-<li><a href="https://livedrawsdy2.site/" target="_blank" rel="noopener noreferrer">Live Draw SDY</a></li>
-<li><a href="https://livedrawhk2.site/" target="_blank" rel="noopener noreferrer">Live Draw HK</a></li>
-<li><a href="https://paitohk2.site/" target="_blank" rel="noopener noreferrer">Paito HK</a></li>
-<li><a href="https://paitosdy1.site/" target="_blank" rel="noopener noreferrer">Paito SDY</a></li>
-<li><a href="https://1datahk.site/" target="_blank" rel="noopener noreferrer">Data HK</a></li>
-<li><a href="https://datahklotto.space/" target="_blank" rel="noopener noreferrer">Data HK Lotto</a></li>
-<li><a href="https://www.datasdylotto.space" target="_blank" rel="noopener noreferrer">Data SDY Lotto</a></li>
-<li><a href="https://1angkanet.site/" target="_blank" rel="noopener noreferrer">Angkanet</a></li>
+<div class="item">
+<h3>Tampilan Ringan</h3>
+<p>CSS dibuat sederhana sehingga halaman lebih cepat dibuka melalui desktop maupun perangkat mobile.</p>
+</div>
+</article>
+
+</section>
+
+<aside>
+
+<section class="card">
+<h2>Ringkasan</h2>
+
+<p>
+LeadSale Store memakai gaya yang lebih santai namun tetap profesional. Cocok untuk halaman pendukung yang berisi catatan dan rujukan data.
+</p>
+
+<div class="pin">
+Serius boleh, kaku jangan. Website juga butuh napas.
+</div>
+</section>
+
+<section class="card" id="referensi">
+<h2>Referensi Terkait</h2>
+
+<p>
+Beberapa rujukan berikut dipilih sebagai pendukung yang masih relevan dengan catatan data dan arsip digital.
+</p>
+
+<ul class="links">
+<li><a href="https://medium.com/@seopools01" target="_blank" rel="noopener noreferrer">Catatan Data Hongkong di Medium</a></li>
+<li><a href="https://datahk2026.github.io/data-hk-2026-terbaru/" target="_blank" rel="noopener noreferrer">Arsip Data HK GitHub Pages</a></li>
+<li><a href="https://datahongkong6.wordpress.com/" target="_blank" rel="noopener noreferrer">Data Hongkong WordPress</a></li>
+<li><a href="https://livedrawhk328975.blogspot.com/" target="_blank" rel="noopener noreferrer">Catatan Result HK Blogspot</a></li>
+<li><a href="https://ayasusanti.hashnode.dev/" target="_blank" rel="noopener noreferrer nofollow">Catatan Referensi Hashnode</a></li>
 </ul>
-            </ul>
-          </div>
-        </div>
-      </aside>
-    </section>
+</section>
 
-    <footer class="footer" role="contentinfo">
-      <div class="wrap">
-        <div class="footcard">
-          <div style="font-weight:1000;color:var(--navy);margin-bottom:6px">LeadSale Store</div>
-          <p style="margin:0;color:var(--muted);font-size:14px">
-            โครงสร้างหน้าแบบ “ข่าวสารหน่วยงาน” + Directory สำหรับโดเมน leadsale.store
-            โดยยังคงลิงก์เดิมทั้งหมด และสามารถเพิ่มหน้าอื่น ๆ เช่น /privacy.html ได้ตามต้องการ
-          </p>
-        </div>
+</aside>
 
-        <div class="footcard">
-          <div style="font-weight:1000;color:var(--navy);margin-bottom:6px">ลิงก์สำคัญ</div>
-          <div class="legal">
-            <div><a href="/privacy.html">Privacy Policy</a> (buat file jika diperlukan)</div>
-            <div>© <span id="y"></span> leadsale.store</div>
-          </div>
-        </div>
+</div>
 
-        <div class="footcard">
-          <div style="font-weight:1000;color:var(--navy);margin-bottom:6px">หมายเหตุ</div>
-          <p style="margin:0;color:var(--muted);font-size:14px">
-            แนะนำวางไฟล์นี้เป็น <code>index.html</code> เพื่อใช้งานบน GitHub Pages ได้ทันที
-          </p>
-        </div>
-      </div>
-    </footer>
-  </main>
+</main>
 
-  <script>
-    const now = new Date();
-    const y = now.getFullYear();
-    const pad = (n)=> String(n).padStart(2,'0');
-    document.getElementById('y').textContent = y;
-    document.getElementById('yTop').textContent = y;
-    document.getElementById('yInline').textContent = y;
+<footer class="foot">
+<div class="wrap">
+© 2026 LeadSale Store. All Rights Reserved.
+</div>
+</footer>
 
-    // tanggal format sederhana (TH)
-    const d = `${pad(now.getDate())}/${pad(now.getMonth()+1)}/${now.getFullYear()}`;
-    document.getElementById('d').textContent = d;
-  </script>
 </body>
 </html>
